@@ -20,6 +20,11 @@ a {
     color: inherit;
 }
 
+::selection {
+    color: rgb(252, 252, 252);
+    background: rgba(157, 0, 214, 0.474);
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
@@ -28,8 +33,18 @@ body {
     background-color: black;
 }
 
+h1 {
+    background: linear-gradient(90deg, #cb86ff, rgb(80, 20, 139));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
 .content {
     height: 100vh;
+    /* for mobile devices */
+    height: 100svh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,9 +52,13 @@ body {
 }
 
 .contacts {
-    margin-top: 10px;
+    margin-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.contacts>a {
+    margin-bottom: 3px;
 }
